@@ -1,0 +1,30 @@
+body {
+    background-color: transparent; /* Para ficar invisível no OBS */
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#pohretron-img {
+    width: 500px;
+    display: none;
+    position: absolute;
+    /* As linhas abaixo garantem o centro perfeito */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Efeito de Tremor Estilo GMod corrigido para o centro */
+@keyframes tremer {
+    0% { transform: translate(-50%, -50%) translate(-2px, -2px); }
+    50% { transform: translate(-50%, -50%) translate(2px, 2px); }
+    100% { transform: translate(-50%, -50%) translate(-2px, -2px); }
+}
+
+.efeito-colisao {
+    animation: tremer 0.1s infinite;
+}
